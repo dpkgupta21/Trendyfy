@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff6701</color>
+    <color name="colorPrimaryDark">#fa5656</color>
+    <color name="colorAccent">#ff6701</color>
+
+    <color name="badgeColor">#651FFF</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#e8e8e8</color>
+    <color name="black">#000000</color>
+    <color name="purple">#3F51B5</color>
+
+    <color name="stay_color">#999999</color>
+
+    <color name="gen_black">#000000</color>
+    <color name="gen_white">#FFFFFF</color>
+    <color name="green">#4CAF50</color>
+    <color name="grey_light">#E0E0E0</color>
+
+    <color name="dropdown">#0e3153</color>
+    <color name="blue_pop_up_header">#ff6701</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="fill_circle_color">#dd5145</color>
+</resources>

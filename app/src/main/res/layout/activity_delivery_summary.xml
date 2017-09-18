@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_item_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar" />
+
+    <com.trendyfy.customviews.CustomTextView
+        android:id="@+id/txt_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tool_bar"
+        android:layout_margin="10dp"
+        android:text="Amount : "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <com.trendyfy.customviews.CustomTextView
+        android:id="@+id/txt_amount_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_amount"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/txt_amount"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:text="Rs. 2000"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <com.trendyfy.customviews.CustomTextView
+        android:id="@+id/txt_total_cashback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/txt_amount"
+        android:layout_below="@id/txt_amount_val"
+        android:text="Total CashBack : "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <com.trendyfy.customviews.CustomTextView
+        android:id="@+id/txt_total_cashback_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txt_total_cashback"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/txt_total_cashback"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <com.trendyfy.customviews.CustomTextView
+        android:id="@+id/txt_use_cashback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/txt_amount"
+        android:layout_below="@id/txt_total_cashback_val"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:text="Use CashBack : "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <com.trendyfy.customviews.CustomEditText
+        android:id="@+id/edt_use_cashback_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/txt_use_cashback"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/edt_rectangle_boundary"
+        android:gravity="center_vertical"
+        android:inputType="number"
+        android:maxEms="5"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:minEms="5"
+        android:hint="@string/rs"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+
+    <com.trendyfy.customviews.CustomTextView
+        android:id="@+id/txt_total_remaining_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/txt_amount"
+        android:layout_below="@id/edt_use_cashback_val"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:text="Payable Amount : "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <com.trendyfy.customviews.CustomTextView
+        android:id="@+id/txt_total_remaining_amount_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txt_total_remaining_amount"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/txt_total_remaining_amount"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:text="Rs. 2000"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/horizontal_seperator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txt_total_remaining_amount_val"
+        android:layout_marginTop="5dp"
+        android:background="@color/stay_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/horizontal_seperator"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <com.trendyfy.customviews.CustomTextView
+            android:id="@+id/txt_delivery_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Address"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.trendyfy.customviews.CustomTextView
+            android:id="@+id/txt_delivery_address_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_delivery_address"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edt_rectangle_boundary"
+            android:padding="10dp"
+            android:text="Delivery Address"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.trendyfy.customviews.CustomButton
+            android:id="@+id/btn_cod"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Cash on Delivery"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.trendyfy.customviews.CustomButton
+            android:id="@+id/btn_online_payment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Online Payment"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

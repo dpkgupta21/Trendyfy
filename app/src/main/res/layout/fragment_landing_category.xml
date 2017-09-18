@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/relative_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_no_internet"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/no_internet" />
+        <!-- No data text -->
+        <com.trendyfy.customviews.CustomTextView
+            android:id="@+id/txt_no_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_no_internet"
+            android:layout_centerInParent="true"
+            android:text="No Internet Connectivity"
+            android:textSize="17sp" />
+
+        <com.trendyfy.customviews.CustomTextView
+            android:id="@+id/txt_try_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/txt_no_category"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/margin_10dp"
+            android:text="Try Again!"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="19sp" />
+    </RelativeLayout>
+</RelativeLayout>

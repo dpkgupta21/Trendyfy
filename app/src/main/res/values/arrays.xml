@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <!-- Side Menu options -->
+    <string-array name="category_item">
+        <item>Grocery</item>
+        <item>Men</item>
+        <item>Women</item>
+        <item>Home &amp; Lifestyle</item>
+        <item>Electronics</item>
+        <item>Kids</item>
+        <item>Books &amp; Stationary</item>
+        <item>@string/user_account</item>
+        <item>@string/orders</item>
+        <item>@string/settings</item>
+    </string-array>
+
+    <string-array name="user_account_for_display">
+        <item>Forget Password</item>
+    </string-array>
+
+    <string-array name="orders_for_display">
+        <item>My Orders</item>
+        <item>Statement</item>
+    </string-array>
+
+
+    <string-array name="settings_for_display">
+        <item>Edit Profile</item>
+        <item>Logout</item>
+    </string-array>
+
+    <string-array name="category_icon_name">
+        <item>grocery</item>
+        <item>men</item>
+        <item>women</item>
+        <item>home</item>
+        <item>electronics</item>
+        <item>kids</item>
+        <item>books</item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="category_item_for_webservice">
+        <item>Grocery</item>
+        <item>Men</item>
+        <item>Women</item>
+        <item>Home &amp; Lifestyle</item>
+        <item>ElectronicsMobileAccessories</item>
+        <item>Kids</item>
+        <item>Books &amp; Stationary</item>
+        <item>@string/user_account</item>
+        <item>@string/orders</item>
+        <item>@string/settings</item>
+    </string-array>
+
+
+    <string-array name="grocery_subcategory_for_display">
+        <item>Grocery/Staples</item>// This is heading
+        <item>Atta/Rice</item>
+        <item>Sooji/Besan</item>
+        <item>Pulses</item>
+        <item>Oil/Ghee</item>
+        <item>Spices</item>
+        <item>Salt/Sugar</item>
+        <item>Tea &amp; Coffee</item>
+        <item>Other Grocery</item>
+        <item>Detergent</item>
+        <item>Personal Hygeine</item>
+        <item>Fruit Drink &amp; Juice</item>
+        <item>Ready To Eat</item>
+        <item>Dairy Product</item>
+        <item>Soft Drink</item>
+        <item>Cookies &amp; Chocolate</item>
+        <item>Perfumes &amp; Deodrants</item>
+        <item>Hair Care</item>
+        <item>Freshener</item>
+        <item>Skin Care</item>
+        <item>Namkeen/Sweets</item>
+        <item>Health Drink/Health Food</item>
+        <item>Noodles/Soup</item>
+        <item>Pooja Needs</item>
+        <item>Cleaning Aids</item>
+        <item>Pickels</item>
+        <item>Drinking Water</item>
+        <item>Milk</item>// This is heading
+    </string-array>
+    <string-array name="grocery_subcategory_for_webservice">
+        <item>Grocery/Staples</item>// This is heading
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>25</item>
+        <item>26</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>Milk</item>// This is heading
+    </string-array>
+
+    <string-array name="men_subcategory_for_display">
+        <item>Men Clothing</item>
+        // This is heading
+        <item>Jeans</item>
+        <item>TShirt</item>
+        <item>Waistcoat</item>
+        <item>Blazer</item>
+        <item>Shirts</item>
+        <item>Trackpant</item>
+        <item>Jackets</item>
+        <item>Ethnic</item>
+        <item>Sherwani</item>
+        <item>Men Footwear</item>
+        // This is heading
+        <item>Formal Shoes</item>
+        <item>Casual Shoe</item>
+        <item>Loafer</item>
+        <item>Slipper</item>
+        <item>FlipFlop</item>
+        <item>Sandal</item>
+        <item>Men Accessories</item>
+        // This is heading
+        <item>Tie</item>
+        <item>Watch</item>
+        <item>Bag</item>
+        <item>Socks</item>
+        <item>Belt</item>
+        <item>Wallet</item>
+        <item>Sunglass</item>
+        <item>Frame</item>
+    </string-array>
+    <string-array name="men_subcategory_for_webservice">
+        <item>Men Clothing</item>
+        // This is heading
+        <item>Jeans</item>
+        <item>TShirt</item>
+        <item>Waistcoat</item>
+        <item>Blazer</item>
+        <item>Shirts</item>
+        <item>Trackpant</item>
+        <item>Jackets</item>
+        <item>Ethnic</item>
+        <item>Sherwani</item>
+        <item>Men Footwear</item>
+        // This is heading
+        <item>Shoes</item>
+        <item>Casual</item>
+        <item>Loafer</item>
+        <item>Slipper</item>
+        <item>FlipFlop</item>
+        <item>Sandal</item>
+        <item>Men Accessories</item>
+        // This is heading
+        <item>Tie</item>
+        <item>Watch</item>
+        <item>Bag</item>
+        <item>Socks</item>
+        <item>Belt</item>
+        <item>Wallet</item>
+        <item>Sunglass</item>
+        <item>Frame</item>
+    </string-array>
+
+    <string-array name="women_subcategory_for_display">
+        <item>Women Clothing</item>
+        // This is heading
+        <item>Sarees</item>
+        <item>Blouse</item>
+        <item>Lehenga</item>
+        <item>Designer Ethnic Dress</item>
+        <item>Tunics</item>
+        <item>Tops</item>
+        <item>Leggings</item>
+        <item>Suit</item>
+        <item>Jumpsuits</item>
+        <item>Jeans</item>
+        <item>Shirt</item>
+        <item>Western Dress</item>
+        <item>Kurti</item>
+        <item>Skirts</item>
+        <item>Plazo</item>
+        <item>Jacket</item>
+        <item>Shrug</item>
+        <item>Women Footwear</item>
+        // This is heading
+        <item>Sandal</item>
+        <item>Bally</item>
+        <item>Loafer</item>
+        <item>Floater</item>
+        <item>Wedge</item>
+        <item>Shoe</item>
+        <item>Slipper</item>
+        <item>Ethnic</item>
+        <item>Beauty &amp;  Cosmetics</item>
+        // This is heading
+        <item>Nailpaint</item>
+        <item>Eyeliner</item>
+        <item>Kajal</item>
+        <item>Women Accessories</item>
+        // This is heading
+        <item>Watch</item>
+        <item>Sunglass</item>
+        <item>Frame</item>
+        <item>Belt</item>
+        <item>Socks</item>
+        <item>Lingerie, Sleep &amp;  Swimwear</item>
+        // This is heading
+        <item>Babydolls</item>
+        <item>Bikini sets</item>
+        <item>Nightwears</item>
+        <item>Jewellery</item>
+        // This is heading
+        <item>Pendant</item>
+        <item>Earrings</item>
+        <item>Necklace</item>
+        <item>Bags</item>
+        // This is heading
+        <item>Handbag</item>
+        <item>Sling Bag</item>
+        <item>Wallet</item>
+    </string-array>
+    <string-array name="women_subcategory_for_webservice">
+        <item>Women Clothing</item>
+        // This is heading
+        <item>Sarees</item>
+        <item>Blouse</item>
+        <item>Lehenga</item>
+        <item>Designer</item>
+        <item>Tunics</item>
+        <item>Tops</item>
+        <item>Leggings</item>
+        <item>Suit</item>
+        <item>Jumpsuits</item>
+        <item>Jeans</item>
+        <item>Shirt</item>
+        <item>WesternDress</item>
+        <item>Kurti</item>
+        <item>Skirts</item>
+        <item>Plazo</item>
+        <item>Jacket</item>
+        <item>Shrug</item>
+        <item>Women Footwear</item>
+        // This is heading
+        <item>Sandal</item>
+        <item>Balley</item>
+        <item>Loafer</item>
+        <item>Floater</item>
+        <item>Wedge</item>
+        <item>Shoe</item>
+        <item>Slipper</item>
+        <item>Ethnic</item>
+        <item>Beauty &amp;  Cosmetics</item>
+        // This is heading
+        <item>Nailpaint</item>
+        <item>Eyeliner</item>
+        <item>Kajal</item>
+        <item>Women Accessories</item>
+        // This is heading
+        <item>Watch</item>
+        <item>Sunglass</item>
+        <item>Frame</item>
+        <item>Belt</item>
+        <item>Socks</item>
+        <item>Lingerie, Sleep &amp;  Swimwear</item>
+        // This is heading
+        <item>Babydolls</item>
+        <item>Bikinisets</item>
+        <item>Nightwears</item>
+        <item>Jewellery</item>
+        // This is heading
+        <item>Pendant</item>
+        <item>Earrings</item>
+        <item>Necklace</item>
+        <item>Bags</item>
+        // This is heading
+        <item>Handbag</item>
+        <item>SlingBag</item>
+        <item>Wallet</item>
+    </string-array>
+
+    <string-array name="home_subcategory_for_display">
+        <item>Home Furnishing</item>
+        // This is heading
+        <item>Bed Sheet</item>
+        <item>Cushion &amp;  Pillow Cover</item>
+        <item>Curtain</item>
+        <item>Bean Bag</item>
+        <item>Mat</item>
+        <item>Carpet</item>
+        <item>Table &amp;  Kitchen Linen</item>
+        <item>Kitchen &amp;  Dinning</item>
+        // This is heading
+        <item>Container</item>
+        <item>Mug</item>
+        <item>Glassware</item>
+        <item>Dinner Set</item>
+        <item>Kitchen Tool</item>
+        <item>Dining &amp;  Serving</item>
+        <item>Lunch Box</item>
+        <item>Pots,Pan &amp;  Cooker</item>
+        <item>Roti Maker</item>
+        <item>Mixer / Juicer</item>
+        <item>Home Decor</item>
+        // This is heading
+        <item>Table Decor</item>
+        <item>Wall Decor</item>
+        <item>Gifts Item</item>
+        <item>Handicraft</item>
+        <item>Table Lamp</item>
+        <item>Table Clock</item>
+        <item>Wall Clock</item>
+        <item>Home Appliances</item>
+        // This is heading
+        <item>Iron</item>
+        <item>Kitchen Appliances</item>
+        // This is heading
+        <item>Microwave</item>
+        <item>Food Processor</item>
+        <item>Induction Chulha</item>
+        <item>Electric Kettle</item>
+    </string-array>
+    <string-array name="home_subcategory_for_webservice">
+        <item>Home Furnishing</item>
+        // This is heading
+        <item>BedSheet</item>
+        <item>CushioCover</item>
+        <item>Curtain</item>
+        <item>BeanBag</item>
+        <item>Mat</item>
+        <item>Carpet</item>
+        <item>TableKitchen</item>
+        <item>Kitchen &amp;  Dinning</item>
+        // This is heading
+        <item>Container</item>
+        <item>Mug</item>
+        <item>Glassware</item>
+        <item>DinnerSet</item>
+        <item>Kitchen</item>
+        <item>Dining</item>
+        <item>Lunch</item>
+        <item>Pots</item>
+        <item>RotiMaker</item>
+        <item>Mixer</item>
+        <item>Home Decor</item>
+        // This is heading
+        <item>TableDecor</item>
+        <item>WallDecor</item>
+        <item>GiftsItem</item>
+        <item>Handicraft</item>
+        <item>TableLamp</item>
+        <item>TableClock</item>
+        <item>WallClock</item>
+        <item>Home Appliances</item>
+        // This is heading
+        <item>Iron</item>
+        <item>Kitchen Appliances</item>
+        // This is heading
+        <item>Microwave</item>
+        <item>FoodProcessor</item>
+        <item>InductionChulha</item>
+        <item>ElectricKettle</item>
+    </string-array>
+
+    <string-array name="electronics_subcategory_for_display">
+        <item>All Mobile</item>
+        <item>Mobile Accessories</item>
+        // This is heading
+        <item>Power Bank</item>
+        <item>Memory Card</item>
+        <item>Battery</item>
+        <item>Cover</item>
+        <item>Ear Phone</item>
+        <item>Head Phone</item>
+        <item>Selfie stick</item>
+        <item>Computer Accessories</item>
+        // This is heading
+        <item>Data card</item>
+        <item>Pendrive</item>
+    </string-array>
+    <string-array name="electronics_subcategory_for_webservice">
+        <item>AllMobile</item>
+        <item>Mobile Accessories</item>
+        // This is heading
+        <item>PowerBank</item>
+        <item>MemoryCard</item>
+        <item>Battery</item>
+        <item>Cover</item>
+        <item>EarPhone</item>
+        <item>HeadPhone</item>
+        <item>selfiestick</item>
+        <item>Computer Accessories</item>
+        // This is heading
+        <item>Datacard</item>
+        <item>Pendrive</item>
+    </string-array>
+
+    <string-array name="books_subcategory_for_display">
+        <item>Books</item>
+        // This is heading
+        <item>Educational Books</item>
+        <item>Historical Books</item>
+        <item>Novel</item>
+        <item>Professional Book</item>
+        <item>Office Equipment</item>
+        // This is heading
+        <item>Corporate Gifts</item>
+        <item>Bags &amp;  Luggage</item>
+        // This is heading
+        <item>Laptop Bags</item>
+        <item>College Bags</item>
+        <item>Tracking Bags</item>
+        <item>Stationary</item>// This is heading
+        <item>Diary</item>
+    </string-array>
+    <string-array name="books_subcategory_for_webservice">
+        <item>Books</item>
+        // This is heading
+        <item>Educational</item>
+        <item>Historical</item>
+        <item>Novel</item>
+        <item>Professional</item>
+        <item>OfficeEquipment</item>
+        // This is heading
+        <item>CorporateGifts</item>
+        <item>Bags</item>
+        // This is heading
+        <item>Laptop</item>
+        <item>College</item>
+        <item>Trekking</item>
+        <item>Stationary</item>// This is heading
+        <item>Diary</item>
+    </string-array>
+
+    <string-array name="kids_subcategory_for_display">
+        <item>Kids Clothing</item>
+        // This is heading
+        <item>Boys Shirt</item>
+        <item>Boys TShirt</item>
+        <item>Boys Jackets</item>
+        <item>Boys Shorts</item>
+        <item>Baby Girls Cloths</item>
+        <item>Baby Boys Cloths</item>
+        <item>Girl Dress</item>
+        <item>Girl TShirt</item>
+        <item>Kids Footwear</item>
+        // This is heading
+        <item>Boys Footwear</item>
+        <item>Girls Footwear</item>
+        <item>Kids Accessories</item>
+        // This is heading
+        <item>Sunglass</item>
+        <item>Bag</item>
+        <item>Watch</item>
+        <item>Toy &amp; Games</item>
+        // This is heading
+        <item>Dolls</item>
+        <item>Construction Toys</item>
+
+    </string-array>
+    <string-array name="kids_subcategory_for_webservice">
+        <item>KidsClothing</item>
+        // This is heading
+        <item>BoysShirt</item>
+        <item>BoysTShirt</item>
+        <item>BoysJacket</item>
+        <item>BoysShorts</item>
+        <item>GirlsCloths</item>
+        <item>BoysCloths</item>
+        <item>GirlDress</item>
+        <item>GirlTShirt</item>
+        <item>KidsFootwear</item>
+        // This is heading
+        <item>BoysFootwear</item>
+        <item>GirlsFootwear</item>
+        <item>KidsAccessories</item>
+        // This is heading
+        <item>Sunglass</item>
+        <item>Bag</item>
+        <item>Watch</item>
+        <item>ToyGames</item>
+        // This is heading
+        <item>Dolls</item>
+        <item>Construction</item>
+    </string-array>
+
+
+</resources>
+

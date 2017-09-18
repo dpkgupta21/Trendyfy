@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.trendyfy"
+    android:versionCode="8"
+    android:versionName="1.7">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.trendyfy.volley.Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.trendyfy.activity.HomeActivity"
+            android:label="Trendyfy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trendyfy.activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.trendyfy.activity.ImagePagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trendyfy.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trendyfy.activity.SignupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trendyfy.activity.ProductDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trendyfy.activity.CartListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trendyfy.activity.DeliverySummaryActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.trendyfy.activity.ChangeAddressActivity" />
+        <activity android:name="com.trendyfy.activity.DeliveryCompleteActivity" />
+        <activity android:name="com.trendyfy.activity.ForgetPasswordActivity"></activity>
+    </application>
+
+</manifest>
