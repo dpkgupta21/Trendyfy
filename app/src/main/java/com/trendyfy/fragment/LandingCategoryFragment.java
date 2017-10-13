@@ -15,6 +15,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -27,8 +28,10 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.trendyfy.R;
 import com.trendyfy.activity.CartListActivity;
+import com.trendyfy.activity.ChangeAddressActivity;
 import com.trendyfy.activity.HomeActivity;
 import com.trendyfy.activity.LoginActivity;
+import com.trendyfy.activity.SearchListActivity;
 import com.trendyfy.activity.SignupActivity;
 import com.trendyfy.adapter.MainMasterAdapter;
 import com.trendyfy.customviews.CustomProgressDialog;
@@ -49,7 +52,7 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class LandingCategoryFragment extends Fragment implements View.OnClickListener{
+public class LandingCategoryFragment extends Fragment implements View.OnClickListener {
 
     private View view;
     private Activity mActivity;
@@ -139,9 +142,8 @@ public class LandingCategoryFragment extends Fragment implements View.OnClickLis
             LoginResponseModel loginResponseModel = AppPreference.getObjectFromPref(mActivity,
                     PreferenceHelp.USER_INFO);
             if (loginResponseModel != null) {
-                Intent intent = new Intent(mActivity, SignupActivity.class);
+                Intent intent = new Intent(mActivity, ChangeAddressActivity.class);
                 intent.putExtra("isEdit", true);
-                intent.putExtra("isForEditProfile", true);
                 startActivity(intent);
             } else {
                 startActivity(new Intent(mActivity, LoginActivity.class));
@@ -157,10 +159,12 @@ public class LandingCategoryFragment extends Fragment implements View.OnClickLis
         mActivity = getActivity();
 
 
-        txt_no_category= (TextView)  view.findViewById(R.id.txt_no_category);
+        txt_no_category = (TextView) view.findViewById(R.id.txt_no_category);
         relative_no_data = (RelativeLayout) view.findViewById(R.id.relative_no_data);
-        txt_try_again= (TextView)  view.findViewById(R.id.txt_try_again);
-        img_no_internet= (ImageView)  view.findViewById(R.id.img_no_internet);
+        txt_try_again = (TextView) view.findViewById(R.id.txt_try_again);
+        img_no_internet = (ImageView) view.findViewById(R.id.img_no_internet);
+
+        //ImageView img_search = (ImageView) view.findViewById(R.id.img_search);
 
         recycle_category = (RecyclerView) view.findViewById(R.id.recycle_category);
 //        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(1,
@@ -177,6 +181,7 @@ public class LandingCategoryFragment extends Fragment implements View.OnClickLis
 
         recycle_category.setLayoutManager(layoutManager);
         txt_try_again.setOnClickListener(this);
+       // img_search.setOnClickListener(this);
 
         // Get Main master list
         getMainMasterList();
@@ -226,7 +231,7 @@ public class LandingCategoryFragment extends Fragment implements View.OnClickLis
                 Application.getInstance().addToRequestQueue(jsonRequest);
                 jsonRequest.setRetryPolicy(new DefaultRetryPolicy(150000, 0,
                         DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-            }else{
+            } else {
                 //Show no internet connectivity message
                 showNoInternetConnectivity();
             }
@@ -236,7 +241,7 @@ public class LandingCategoryFragment extends Fragment implements View.OnClickLis
         }
     }
 
-    private void showNoInternetConnectivity(){
+    private void showNoInternetConnectivity() {
         recycle_category.setVisibility(View.GONE);
         relative_no_data.setVisibility(View.VISIBLE);
 
@@ -270,17 +275,18 @@ public class LandingCategoryFragment extends Fragment implements View.OnClickLis
 
     }
 
-    private void showMessageAccordingData(boolean isDataAvailable){
-        if(isDataAvailable){
+    private void showMessageAccordingData(boolean isDataAvailable) {
+        if (isDataAvailable) {
             relative_no_data.setVisibility(View.GONE);
             recycle_category.setVisibility(View.VISIBLE);
-        }else{
+        } else {
             recycle_category.setVisibility(View.GONE);
             relative_no_data.setVisibility(View.VISIBLE);
             img_no_internet.setVisibility(View.GONE);
             txt_no_category.setText("No Data Available.");
         }
     }
+
     private void displayView(int position) {
 
         String pageType = mainMasterModelList.get(position).getPageType();
@@ -319,10 +325,22 @@ public class LandingCategoryFragment extends Fragment implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.txt_try_again:
                 // Get Main master list
                 getMainMasterList();
+                break;
+            case R.id.img_search:
+                EditText edt_search = (EditText) view.findViewById(R.id.edt_search);
+
+                if (!edt_search.getText().toString().equalsIgnoreCase("")) {
+                    Intent intent = new Intent(mActivity, SearchListActivity.class);
+                    intent.putExtra("searchProduct", edt_search.getText().toString());
+                    mActivity.startActivity(intent);
+                } else {
+                    Utils.customDialog("Field cannot be blank or empty.", mActivity);
+                }
+
                 break;
         }
     }

@@ -1,13 +1,47 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true">
 
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/relative_search"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/white"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:padding="@dimen/margin_10dp"-->
+        <!--android:visibility="visible">-->
+
+        <!--<com.trendyfy.customviews.CustomEditText-->
+            <!--android:id="@+id/edt_search"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toLeftOf="@+id/img_search"-->
+            <!--android:background="@drawable/edt_rectangle_gray_boundary"-->
+            <!--android:hint="@string/search"-->
+            <!--android:maxLines="1"-->
+            <!--android:padding="@dimen/margin_10dp"-->
+            <!--android:textSize="18sp" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/img_search"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@+id/edt_search"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignTop="@+id/edt_search"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:padding="5dp"-->
+            <!--android:src="@android:drawable/ic_menu_search" />-->
+    <!--</RelativeLayout>-->
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycle_category"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/relative_search"
         android:visibility="visible" />
 
     <RelativeLayout
@@ -37,13 +71,13 @@
             android:id="@+id/txt_try_again"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_below="@+id/txt_no_category"
             android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
             android:padding="@dimen/margin_10dp"
             android:text="Try Again!"
             android:textColor="@color/colorPrimary"
-            android:textStyle="bold"
-            android:textSize="19sp" />
+            android:textSize="19sp"
+            android:textStyle="bold" />
     </RelativeLayout>
 </RelativeLayout>

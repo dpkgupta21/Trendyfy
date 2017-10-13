@@ -79,6 +79,7 @@ public class HomeActivity extends AppCompatActivity implements ExpandableListVie
             new MenuHandler(HomeActivity.this);
     public static final int MENU_CASHBACK_HANDLER = 1001;
 
+    public  String value="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -141,6 +142,9 @@ public class HomeActivity extends AppCompatActivity implements ExpandableListVie
         mExpandableListView = (ExpandableListView) mNavigationView.findViewById(R.id.side_menu_list);
 
         categoryList = GetMenuItem();
+
+        Gson gson = new Gson();
+        value= gson.toJson(categoryList);
 
         menuListAdapter = new SideMenuListAdapter(this, categoryList);
         mExpandableListView.setAdapter(menuListAdapter);
@@ -214,9 +218,8 @@ public class HomeActivity extends AppCompatActivity implements ExpandableListVie
                 try {
                     toggleDrawer();
                     if (null != loginResponseModel) {
-                        Intent intent = new Intent(mActivity, SignupActivity.class);
+                        Intent intent = new Intent(mActivity, ChangeAddressActivity.class);
                         intent.putExtra("isEdit", true);
-                        intent.putExtra("isForEditProfile", true);
                         startActivity(intent);
                     } else {
                         startActivity(new Intent(mActivity, LoginActivity.class));
@@ -610,6 +613,8 @@ public class HomeActivity extends AppCompatActivity implements ExpandableListVie
             AppPreference.setItemName(mActivity, "Grocery");
         } else if (pageType.equalsIgnoreCase("Dairy")) {
             AppPreference.setItemName(mActivity, "Dairy");
+        }else if (pageType.equalsIgnoreCase("Cake")) {
+            AppPreference.setItemName(mActivity, "Cake");
         }
 
     }

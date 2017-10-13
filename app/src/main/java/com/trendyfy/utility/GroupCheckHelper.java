@@ -47,6 +47,8 @@ public class GroupCheckHelper {
                 switch (childItem) {
                     case "Milk":
                         return "Dairy";
+                    case "Cake":
+                        return "Cake";
                 }
         }
         return "Grocery";
@@ -240,6 +242,8 @@ public class GroupCheckHelper {
                     case "Grocery/Staples":
                         return true;
                     case "Milk":
+                        return true;
+                    case "Cake":
                         return true;
                 }
                 break;

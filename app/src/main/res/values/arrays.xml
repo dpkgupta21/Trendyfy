@@ -84,7 +84,9 @@
         <item>Cleaning Aids</item>
         <item>Pickels</item>
         <item>Drinking Water</item>
+        <item>Dry Fruits</item>
         <item>Milk</item>// This is heading
+        <item>Cake</item>// This is heading
     </string-array>
     <string-array name="grocery_subcategory_for_webservice">
         <item>Grocery/Staples</item>// This is heading
@@ -114,7 +116,9 @@
         <item>22</item>
         <item>23</item>
         <item>24</item>
+        <item>27</item>
         <item>Milk</item>// This is heading
+        <item>Cake</item>// This is heading
     </string-array>
 
     <string-array name="men_subcategory_for_display">
@@ -129,6 +133,7 @@
         <item>Jackets</item>
         <item>Ethnic</item>
         <item>Sherwani</item>
+        <item>Shorts</item>
         <item>Men Footwear</item>
         // This is heading
         <item>Formal Shoes</item>
@@ -160,6 +165,7 @@
         <item>Jackets</item>
         <item>Ethnic</item>
         <item>Sherwani</item>
+        <item>Shorts</item>
         <item>Men Footwear</item>
         // This is heading
         <item>Shoes</item>
@@ -237,6 +243,7 @@
         <item>Handbag</item>
         <item>Sling Bag</item>
         <item>Wallet</item>
+        <item>Clutches</item>
     </string-array>
     <string-array name="women_subcategory_for_webservice">
         <item>Women Clothing</item>
@@ -295,6 +302,7 @@
         <item>Handbag</item>
         <item>SlingBag</item>
         <item>Wallet</item>
+        <item>Clutches</item>
     </string-array>
 
     <string-array name="home_subcategory_for_display">
@@ -391,6 +399,7 @@
         <item>Ear Phone</item>
         <item>Head Phone</item>
         <item>Selfie stick</item>
+        <item>ScreenGuard</item>
         <item>Computer Accessories</item>
         // This is heading
         <item>Data card</item>
@@ -407,6 +416,7 @@
         <item>EarPhone</item>
         <item>HeadPhone</item>
         <item>selfiestick</item>
+        <item>ScreenGuard</item>
         <item>Computer Accessories</item>
         // This is heading
         <item>Datacard</item>

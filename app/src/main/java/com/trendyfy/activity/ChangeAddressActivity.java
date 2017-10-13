@@ -63,11 +63,10 @@ public class ChangeAddressActivity extends AppCompatActivity implements View.OnC
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(mToolbar);
-        // set the toolbar title
-        getSupportActionBar().setTitle("Change Address");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         isEdit = getIntent().getBooleanExtra("isEdit", false);
+        // set the toolbar title
+        getSupportActionBar().setTitle(isEdit ? "Edit Profile" : "Change Address");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         init();

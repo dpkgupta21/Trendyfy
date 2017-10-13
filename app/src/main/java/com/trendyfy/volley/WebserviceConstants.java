@@ -32,5 +32,5 @@ public class WebserviceConstants {
     public static String CUSTOMER_TRACK_ORDER_JSON="CustomerTrackOrderJSON";
     public static String CUSTOMER_ACCOUNT_STATEMENT_JSON="CustomerAccountStatementJSON";
     public static String GET_CUSTOMER_CASHBACK="GetCustomerCashBack";
-
+    public static String PRODUCT_DETAIL_SEARCH="ProductDetailSearchJSON";
 }

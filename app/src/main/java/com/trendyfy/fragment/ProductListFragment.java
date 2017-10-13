@@ -31,6 +31,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.trendyfy.R;
 import com.trendyfy.activity.CartListActivity;
+import com.trendyfy.activity.ChangeAddressActivity;
 import com.trendyfy.activity.HomeActivity;
 import com.trendyfy.activity.LoginActivity;
 import com.trendyfy.activity.SignupActivity;
@@ -156,9 +157,8 @@ public class ProductListFragment extends Fragment implements View.OnClickListene
             LoginResponseModel loginResponseModel = AppPreference.getObjectFromPref(mActivity,
                     PreferenceHelp.USER_INFO);
             if (loginResponseModel != null) {
-                Intent intent = new Intent(mActivity, SignupActivity.class);
+                Intent intent = new Intent(mActivity, ChangeAddressActivity.class);
                 intent.putExtra("isEdit", true);
-                intent.putExtra("isForEditProfile", true);
                 startActivity(intent);
             } else {
                 startActivity(new Intent(mActivity, LoginActivity.class));

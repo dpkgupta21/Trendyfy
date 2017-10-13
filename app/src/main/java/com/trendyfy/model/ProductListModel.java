@@ -24,6 +24,15 @@ public class ProductListModel implements Serializable {
     private String itemName;
     private String descrption;
     private String Result;
+    private String  BrandName;
+
+    public String getBrandName() {
+        return BrandName;
+    }
+
+    public void setBrandName(String brandName) {
+        BrandName = brandName;
+    }
 
     public String getResult() {
         return Result;
