@@ -56,14 +56,18 @@ public class LocationChooseFragment extends DialogFragment implements
     private SpinnerAdapter locationSpinnerAdapter;
     private List<SpinnerItemModel> spinnerLocationItemModelList;
 
+    private boolean isFromSearch;
 
     public LocationChooseFragment() {
 
     }
 
 
-    public static LocationChooseFragment newInstance() {
+    public static LocationChooseFragment newInstance(boolean isFromSearch) {
         LocationChooseFragment fragment = new LocationChooseFragment();
+        Bundle b = new Bundle();
+        b.putBoolean("isFromSearch", isFromSearch);
+        fragment.setArguments(b);
         return fragment;
     }
 
@@ -76,9 +80,9 @@ public class LocationChooseFragment extends DialogFragment implements
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mActivity = getActivity();
+        isFromSearch = getArguments().getBoolean("isFromSearch");
         // Inflate the layout for this fragment
         mView = inflater.inflate(R.layout.fragment_location_choose, container, false);
-
 
 
         spin_city = (Spinner) mView.findViewById(R.id.spin_city);
@@ -306,11 +310,13 @@ public class LocationChooseFragment extends DialogFragment implements
                     AppPreference.setCityName(mActivity, selectedCityItem.TEXT);
                     AppPreference.setLocationId(mActivity, selectedLocationItem.EXTRA_TEXT);
                     AppPreference.setLocationName(mActivity, selectedLocationItem.TEXT);
+                    if (!isFromSearch) {
 
-                    ProductListFragment fragment = ProductListFragment.newInstance();
-                    FragmentTransaction ft = getFragmentManager().beginTransaction();
-                    ft.replace(R.id.frame_container, fragment, fragment.getClass().getName());
-                    ft.commit();
+                        ProductListFragment fragment = ProductListFragment.newInstance();
+                        FragmentTransaction ft = getFragmentManager().beginTransaction();
+                        ft.replace(R.id.frame_container, fragment, fragment.getClass().getName());
+                        ft.commit();
+                    }
 
                     getDialog().dismiss();
                 } else {

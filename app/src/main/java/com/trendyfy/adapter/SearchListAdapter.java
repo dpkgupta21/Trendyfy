@@ -119,12 +119,6 @@ public class SearchListAdapter extends RecyclerView.Adapter<SearchListAdapter.Vi
         holder.mLayoutItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ProductListModel products = productList.get(position);
-                String[] array = products.getBrandName().split("-");
-                AppPreference.setPageType(context, array[0]);
-                AppPreference.setItemName(context, array[1]);
-
-
                 Intent intent = new Intent(context, ProductDetailsActivity.class);
                 intent.putExtra("productObj", productList.get(position));
                 context.startActivity(intent);

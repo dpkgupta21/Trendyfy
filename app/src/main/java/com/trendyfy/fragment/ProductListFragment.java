@@ -212,7 +212,7 @@ public class ProductListFragment extends Fragment implements View.OnClickListene
             linear_grocery_address.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    LocationChooseFragment dFragment = LocationChooseFragment.newInstance();
+                    LocationChooseFragment dFragment = LocationChooseFragment.newInstance(false);
                     // Show DialogFragment
                     dFragment.show(getFragmentManager(), "Dialog Fragment");
                 }

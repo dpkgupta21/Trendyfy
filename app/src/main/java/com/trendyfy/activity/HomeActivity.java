@@ -492,7 +492,7 @@ public class HomeActivity extends AppCompatActivity implements ExpandableListVie
                     } else {
 
                         FragmentManager fm = getSupportFragmentManager();
-                        LocationChooseFragment dFragment = LocationChooseFragment.newInstance();
+                        LocationChooseFragment dFragment = LocationChooseFragment.newInstance(false);
                         // Show DialogFragment
                         dFragment.show(fm, "Dialog Fragment");
                     }

@@ -5,25 +5,24 @@
     android:focusable="false"
     android:focusableInTouchMode="true">
 
-    <!--<RelativeLayout-->
-        <!--android:id="@+id/relative_search"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="@color/white"-->
-        <!--android:orientation="horizontal"-->
-        <!--android:padding="@dimen/margin_10dp"-->
-        <!--android:visibility="visible">-->
+    <RelativeLayout
+        android:id="@+id/relative_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10dp"
+        android:visibility="visible">
 
-        <!--<com.trendyfy.customviews.CustomEditText-->
-            <!--android:id="@+id/edt_search"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_toLeftOf="@+id/img_search"-->
-            <!--android:background="@drawable/edt_rectangle_gray_boundary"-->
-            <!--android:hint="@string/search"-->
-            <!--android:maxLines="1"-->
-            <!--android:padding="@dimen/margin_10dp"-->
-            <!--android:textSize="18sp" />-->
+        <com.trendyfy.customviews.CustomTextView
+            android:id="@+id/txt_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_rectangle_gray_boundary"
+            android:hint="@string/search"
+            android:maxLines="1"
+            android:padding="@dimen/margin_10dp"
+            android:textSize="18sp" />
 
         <!--<ImageView-->
             <!--android:id="@+id/img_search"-->
@@ -35,7 +34,7 @@
             <!--android:layout_centerVertical="true"-->
             <!--android:padding="5dp"-->
             <!--android:src="@android:drawable/ic_menu_search" />-->
-    <!--</RelativeLayout>-->
+    </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycle_category"

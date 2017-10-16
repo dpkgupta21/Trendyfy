@@ -164,7 +164,7 @@ public class LandingCategoryFragment extends Fragment implements View.OnClickLis
         txt_try_again = (TextView) view.findViewById(R.id.txt_try_again);
         img_no_internet = (ImageView) view.findViewById(R.id.img_no_internet);
 
-        //ImageView img_search = (ImageView) view.findViewById(R.id.img_search);
+        TextView txt_search = (TextView) view.findViewById(R.id.txt_search);
 
         recycle_category = (RecyclerView) view.findViewById(R.id.recycle_category);
 //        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(1,
@@ -181,7 +181,7 @@ public class LandingCategoryFragment extends Fragment implements View.OnClickLis
 
         recycle_category.setLayoutManager(layoutManager);
         txt_try_again.setOnClickListener(this);
-       // img_search.setOnClickListener(this);
+        txt_search.setOnClickListener(this);
 
         // Get Main master list
         getMainMasterList();
@@ -316,7 +316,7 @@ public class LandingCategoryFragment extends Fragment implements View.OnClickLis
         } else {
 
             FragmentManager fm = getFragmentManager();
-            LocationChooseFragment dFragment = LocationChooseFragment.newInstance();
+            LocationChooseFragment dFragment = LocationChooseFragment.newInstance(false);
             // Show DialogFragment
             dFragment.show(fm, "Dialog Fragment");
         }
@@ -330,17 +330,9 @@ public class LandingCategoryFragment extends Fragment implements View.OnClickLis
                 // Get Main master list
                 getMainMasterList();
                 break;
-            case R.id.img_search:
-                EditText edt_search = (EditText) view.findViewById(R.id.edt_search);
-
-                if (!edt_search.getText().toString().equalsIgnoreCase("")) {
-                    Intent intent = new Intent(mActivity, SearchListActivity.class);
-                    intent.putExtra("searchProduct", edt_search.getText().toString());
-                    mActivity.startActivity(intent);
-                } else {
-                    Utils.customDialog("Field cannot be blank or empty.", mActivity);
-                }
-
+            case R.id.txt_search:
+                Intent intent = new Intent(mActivity, SearchListActivity.class);
+                mActivity.startActivity(intent);
                 break;
         }
     }
