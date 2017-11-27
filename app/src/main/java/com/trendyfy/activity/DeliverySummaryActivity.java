@@ -36,7 +36,6 @@ import com.trendyfy.preference.AppPreference;
 import com.trendyfy.preference.PreferenceHelp;
 import com.trendyfy.utility.Constants;
 import com.trendyfy.utility.GroupCheckHelper;
-import com.trendyfy.utility.SessionManager;
 import com.trendyfy.utility.Utils;
 import com.trendyfy.volley.Application;
 import com.trendyfy.volley.CustomJsonRequest;
@@ -61,6 +60,7 @@ public class DeliverySummaryActivity extends AppCompatActivity implements TextWa
     private TextView txt_total_cashback_val;
     private TextView txt_total_remaining_amount_val;
     private TextView txt_use_cashback;
+    private TextView txt_max_use_cashback_val;
     private LoginResponseModel userInfo;
     private float totalCartPrice;
     private float totalPayableCartPrice;
@@ -119,6 +119,8 @@ public class DeliverySummaryActivity extends AppCompatActivity implements TextWa
         TextView txt_amount_val = (TextView) findViewById(R.id.txt_amount_val);
         txt_total_cashback_val = (TextView) findViewById(R.id.txt_total_cashback_val);
         txt_use_cashback = (TextView) findViewById(R.id.txt_use_cashback);
+        txt_max_use_cashback_val = (TextView) findViewById(R.id.txt_use_cashback);
+
         edt_use_cashback_val = (EditText) findViewById(R.id.edt_use_cashback_val);
         txt_total_remaining_amount_val = (TextView) findViewById(R.id.txt_total_remaining_amount_val);
         Button btn_cod = (Button) findViewById(R.id.btn_cod);
@@ -261,9 +263,10 @@ public class DeliverySummaryActivity extends AppCompatActivity implements TextWa
                                             type);
                                     cashBackAmount = cashbackAmountModelList.get(0).getCashBackAmt();
                                     txt_total_cashback_val.setText(cashBackAmount + "");
-
+                                    txt_max_use_cashback_val.setText("( Max: " + cashBackAmount / 4 + " )");
                                     if (cashBackAmount == 0) {
                                         txt_use_cashback.setVisibility(View.INVISIBLE);
+                                        txt_max_use_cashback_val.setVisibility(View.INVISIBLE);
                                         edt_use_cashback_val.setVisibility(View.INVISIBLE);
                                     }
                                     Toast.makeText(mActivity, "Item added", Toast.LENGTH_SHORT).show();
@@ -327,7 +330,7 @@ public class DeliverySummaryActivity extends AppCompatActivity implements TextWa
             } catch (Exception e) {
 
             }
-            if (enterAmount <= totalCartPrice && enterAmount <= cashBackAmount) {
+            if (enterAmount <= totalCartPrice && enterAmount <= cashBackAmount / 4) {
                 previousAmount = enterAmount;
                 totalPayableCartPrice = totalCartPrice - enterAmount;
                 txt_total_remaining_amount_val.setText("Rs. " + totalPayableCartPrice);
@@ -418,21 +421,22 @@ public class DeliverySummaryActivity extends AppCompatActivity implements TextWa
                             public void onResponse(String response) {
                                 try {
                                     CustomProgressDialog.hideProgressDialog();
-                                    if (new JSONArray(response).getJSONObject(0)
-                                            .getString("Result : ").equalsIgnoreCase("Record Inserted")) {
+//                                    if (new JSONArray(response).getJSONObject(0)
+//                                            .getString("Result : ").equalsIgnoreCase("Record Inserted")) {
 
-                                        float totalPrice = AppPreference.getTotalCartPrice(mActivity);
-                                        String body = "Your order has confirmed. You have make payment of Rs." + totalPrice;
-                                        sendMessageWebservice(userInfo.getMobileNo(), body);
+                                    float totalPrice = AppPreference.getTotalCartPrice(mActivity);
+                                    String body = "Your order has confirmed. You have make payment of Rs."
+                                            + totalPrice;
+                                    sendMessageWebservice(userInfo.getMobileNo(), body);
 
-                                        // remove added products from preferences and total price as well
-                                        AppPreference.removeObjectIntoPref(mActivity, PreferenceHelp.ADDED_PRODUCT);
-                                        AppPreference.setTotalCartPrice(mActivity, 0.0f);
+                                    // remove added products from preferences and total price as well
+                                    AppPreference.removeObjectIntoPref(mActivity, PreferenceHelp.ADDED_PRODUCT);
+                                    AppPreference.setTotalCartPrice(mActivity, 0.0f);
 
-                                        // Show home screen again
-                                        startActivity(new Intent(mActivity, DeliveryCompleteActivity.class));
-                                        finish();
-                                    }
+                                    // Show home screen again
+                                    startActivity(new Intent(mActivity, DeliveryCompleteActivity.class));
+                                    finish();
+                                    //  }
                                 } catch (Exception e) {
                                     e.printStackTrace();
                                 }

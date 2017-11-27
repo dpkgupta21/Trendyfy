@@ -103,7 +103,6 @@ public class ChangeAddressActivity extends AppCompatActivity implements View.OnC
             edt_city.setText(loginResponseModel.getCity());
             edt_pincode.setText(loginResponseModel.getPincode());
             edt_customer_name.setText(loginResponseModel.getName());
-
         }
 
         Button btn_signup = (Button) findViewById(R.id.btn_signup);

@@ -58,7 +58,7 @@ public class GroupCheckHelper {
         switch (groupPosition) {
             case 3:
                 switch (childItem) {
-                    case "Bedsheet":
+                    case "BedSheet":
                     case "CushionCover":
                     case "Curtain":
                     case "BeanBag":
